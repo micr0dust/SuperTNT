@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{497C84D5-74AB-4BCA-894C-42439DB66445}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>SuperTNT</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Program Files %28x86%29\SuperTNT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.5.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SuperTNT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SuperTNT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="map_select.Designer.vb">
+      <DependentUpon>map_select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="map_select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="rule4.Designer.vb">
+      <DependentUpon>rule4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rule4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.vb">
+      <DependentUpon>start.vb</DependentUpon>
+    </Compile>
+    <Compile Include="start.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web.Designer.vb">
+      <DependentUpon>web.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="劇情參數.vb" />
+    <Compile Include="範本.Designer.vb">
+      <DependentUpon>範本.vb</DependentUpon>
+    </Compile>
+    <Compile Include="範本.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rule1.Designer.vb">
+      <DependentUpon>rule1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rule1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rule2.Designer.vb">
+      <DependentUpon>rule2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rule2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rule3.Designer.vb">
+      <DependentUpon>rule3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rule3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.vb">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rule5.Designer.vb">
+      <DependentUpon>rule5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rule5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="map_select.resx">
+      <DependentUpon>map_select.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rule4.resx">
+      <DependentUpon>rule4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.zh-TW.resx">
+      <DependentUpon>start.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web.resx">
+      <DependentUpon>web.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="範本.resx">
+      <DependentUpon>範本.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rule1.resx">
+      <DependentUpon>rule1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rule2.resx">
+      <DependentUpon>rule2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rule3.resx">
+      <DependentUpon>rule3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rule5.resx">
+      <DependentUpon>rule5.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\can_break_wall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose_ch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose_ch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54b2d246e0e35be.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lob_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ctrl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mach.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yf1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\338.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death_area_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death_area1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dance_score_board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_blue_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gray_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_gray_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dance_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dance_example.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rule1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rule2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_back.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\blood.gif" />
+    <None Include="Resources\monster.png" />
+    <None Include="Resources\piedbiche.png" />
+    <None Include="Resources\map_background.png" />
+    <None Include="Resources\wool_colored_silver.png" />
+    <None Include="Resources\wool_colored_red.png" />
+    <None Include="Resources\wood_sword.png" />
+    <None Include="Resources\rail_normal.png" />
+    <None Include="Resources\pumpkin_face_on.png" />
+    <None Include="Resources\mushroom_red.png" />
+    <None Include="Resources\jukebox_side.png" />
+    <None Include="Resources\iron_bars.png" />
+    <None Include="Resources\glass_blue.png" />
+    <None Include="Resources\flower_allium.png" />
+    <None Include="Resources\diamond_block.png" />
+    <None Include="Resources\bookshelf.png" />
+    <None Include="Resources\story_example.gif" />
+    <None Include="Resources\story_mode.png" />
+    <None Include="Resources\goddad.png" />
+    <None Include="Resources\waiter_ghost.png" />
+    <None Include="Resources\story_player2.png" />
+    <None Include="Resources\jukebox_top.png" />
+    <None Include="Resources\record_strad.png" />
+    <None Include="Resources\librarier.png" />
+    <None Include="Resources\paper.png" />
+    <None Include="Resources\story_mode_form.jpg" />
+    <None Include="Resources\main_ch21.png" />
+    <None Include="Resources\cheif.gif" />
+    <None Include="Resources\map7.png" />
+    <None Include="Resources\map6.png" />
+    <None Include="Resources\map51.png" />
+    <None Include="Resources\b2.png" />
+    <None Include="Resources\b11.png" />
+    <None Include="Resources\bar.png" />
+    <None Include="Resources\map5.png" />
+    <None Include="Resources\map4.png" />
+    <None Include="Resources\map3.png" />
+    <None Include="Resources\map2.png" />
+    <None Include="Resources\map1.png" />
+    <None Include="Resources\sp4.gif" />
+    <None Include="Resources\sp3.gif" />
+    <None Include="Resources\sp2.gif" />
+    <None Include="Resources\sp1.gif" />
+    <None Include="Resources\yfs4.gif" />
+    <None Include="Resources\yfs3.gif" />
+    <None Include="Resources\yfs2.gif" />
+    <None Include="Resources\yfs1.gif" />
+    <None Include="Resources\RR4.gif" />
+    <None Include="Resources\RR3.gif" />
+    <None Include="Resources\RR2.gif" />
+    <None Include="Resources\RR1.gif" />
+    <None Include="Resources\mach4.gif" />
+    <None Include="Resources\mach3.gif" />
+    <None Include="Resources\mach2.gif" />
+    <None Include="Resources\mach1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="zh-Hant\Microsoft.VisualBasic.PowerPacks.Vs.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-TW\SuperTNT.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

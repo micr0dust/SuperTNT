@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Basic Express 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SuperTNT", "SuperTNT\SuperTNT.vbproj", "{497C84D5-74AB-4BCA-894C-42439DB66445}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{497C84D5-74AB-4BCA-894C-42439DB66445}.Debug|x86.ActiveCfg = Debug|x86
+		{497C84D5-74AB-4BCA-894C-42439DB66445}.Debug|x86.Build.0 = Debug|x86
+		{497C84D5-74AB-4BCA-894C-42439DB66445}.Release|x86.ActiveCfg = Release|x86
+		{497C84D5-74AB-4BCA-894C-42439DB66445}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

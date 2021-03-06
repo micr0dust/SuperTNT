@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://www.nei.org/App_Themes/NEIwebsite/Images/favicon.ico" />
+    <title>vbfunction</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <style>
+        a:link {color:darkgrey}
+        a:visited{color:black} 
+        a:hover {color:grey}
+        a{text-decoration:none}
+
+        #xy input{border:0;
+            background-color:#BBFFEE;
+            color:#fff;
+            border-radius:10px;
+            cursor:pointer;
+            width:60px;
+            height:50px;
+            font-size:30px;
+            margin-top:2px;
+            margin-left: 2px;
+            }
+
+        #create{
+            margin-left: 300px;
+        }
+
+        #team input{border:0;
+            color:#fff;
+            border-radius:10px;
+            cursor:pointer;
+            height:40px;
+            font-size:25px;
+            margin-top:10px;
+            }
+        #create input{border:0;
+            background-color:rgb(71, 28, 173);
+            color:#fff;
+            border-radius:10px;
+            cursor:pointer;
+            height:40px;
+            font-size:25px;
+            margin-top:10px;
+        }
+        #team{
+            margin-left: 300px;
+        }
+
+        #xy input:hover{
+            color:#003C9D;
+            background-color:rgba(255, 255, 255, 0.651);
+            border:2px #003C9D solid;
+            }
+
+        #create input:hover{
+            color:rgb(71, 28, 173);
+            background-color:#fff;
+            border:2px rgb(71, 28, 173) solid;
+            }
+
+        #xy{
+            margin-left: 400px;
+            }
+        </style>
+    
+</head>
+<body onload="changeColor()">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    var color = [2000];
+    var i = 1;
+    var txt1 = "    PictureBox";
+    var txt2 = ".Image = ImageList9.Images(c(";
+    var txt3 = "))"+"<br>";
+    var col = "#696969";
+    var pic = [2000];
+    var player;
+
+    pic[101] = 104
+    pic[102] = 2
+    pic[103] = 3
+    pic[104] = 4
+    pic[105] = 5
+    pic[106] = 6
+    pic[107] = 7
+    pic[108] = 8
+    pic[109] = 9
+    pic[110] = 10
+    pic[111] = 11
+    pic[112] = 12
+    pic[113] = 13
+
+    pic[201] = 26
+    pic[202] = 25
+    pic[203] = 24
+    pic[204] = 23
+    pic[205] = 22
+    pic[206] = 21
+    pic[207] = 20
+    pic[208] = 19
+    pic[209] = 18
+    pic[210] = 17
+    pic[211] = 16
+    pic[212] = 15
+    pic[213] = 14
+
+    pic[301] = 59
+    pic[302] = 58
+    pic[303] = 57
+    pic[304] = 56
+    pic[305] = 55
+    pic[306] = 54
+    pic[307] = 53
+    pic[308] = 52
+    pic[309] = 51
+    pic[310] = 50
+    pic[311] = 49
+    pic[312] = 48
+    pic[313] = 47
+
+    pic[401] = 92
+    pic[402] = 91
+    pic[403] = 90
+    pic[404] = 89
+    pic[405] = 88
+    pic[406] = 87
+    pic[407] = 86
+    pic[408] = 85
+    pic[409] = 84
+    pic[410] = 83
+    pic[411] = 82
+    pic[412] = 81
+    pic[413] = 80
+
+    pic[501] = 148
+    pic[502] = 147
+    pic[503] = 146
+    pic[504] = 145
+    pic[505] = 1
+    pic[506] = 123
+    pic[507] = 122
+    pic[508] = 121
+    pic[509] = 120
+    pic[510] = 119
+    pic[511] = 118
+    pic[512] = 117
+    pic[513] = 116
+
+    pic[601] = 181
+    pic[602] = 180
+    pic[603] = 179
+    pic[604] = 178
+    pic[605] = 177
+    pic[606] = 176
+    pic[607] = 175
+    pic[608] = 174
+    pic[609] = 173
+    pic[610] = 172
+    pic[611] = 171
+    pic[612] = 170
+    pic[613] = 169
+
+    pic[701] = 214
+    pic[702] = 213
+    pic[703] = 212
+    pic[704] = 211
+    pic[705] = 210
+    pic[706] = 209
+    pic[707] = 208
+    pic[708] = 207
+    pic[709] = 206
+    pic[710] = 205
+    pic[711] = 204
+    pic[712] = 203
+    pic[713] = 202
+
+    pic[801] = 247
+    pic[802] = 246
+    pic[803] = 245
+    pic[804] = 244
+    pic[805] = 243
+    pic[806] = 242
+    pic[807] = 241
+    pic[808] = 240
+    pic[809] = 239
+    pic[810] = 238
+    pic[811] = 237
+    pic[812] = 236
+    pic[813] = 235
+
+    pic[901] = 280
+    pic[902] = 279
+    pic[903] = 278
+    pic[904] = 277
+    pic[905] = 276
+    pic[906] = 275
+    pic[907] = 274
+    pic[908] = 273
+    pic[909] = 272
+    pic[910] = 271
+    pic[911] = 270
+    pic[912] = 269
+    pic[913] = 268
+
+    pic[1001] = 313
+    pic[1002] = 312
+    pic[1003] = 311
+    pic[1004] = 310
+    pic[1005] = 309
+    pic[1006] = 308
+    pic[1007] = 307
+    pic[1008] = 306
+    pic[1009] = 305
+    pic[1010] = 304
+    pic[1011] = 303
+    pic[1012] = 302
+    pic[1013] = 301
+
+    pic[1101] = 346
+    pic[1102] = 345
+    pic[1103] = 344
+    pic[1104] = 343
+    pic[1105] = 342
+    pic[1106] = 341
+    pic[1107] = 340
+    pic[1108] = 339
+    pic[1109] = 338
+    pic[1110] = 337
+    pic[1111] = 336
+    pic[1112] = 335
+    pic[1113] = 334
+
+    pic[1201] = 379
+    pic[1202] = 378
+    pic[1203] = 377
+    pic[1204] = 376
+    pic[1205] = 375
+    pic[1206] = 374
+    pic[1207] = 373
+    pic[1208] = 372
+    pic[1209] = 371
+    pic[1210] = 370
+    pic[1211] = 369
+    pic[1212] = 368
+    pic[1213] = 367
+
+
+
+    function changeColor(){
+        if (i == 0)
+        col = "#BBFFEE";
+        if (i == 1)
+        col = "#FFCC22";
+        if (i == 2)
+        col = "#008844";
+        if (i == 3)
+        col = "#880000";
+
+        document.getElementById("nowcolor").style.backgroundColor = col;
+        setTimeout('changeColor()',1000);
+        }
+     
+function create() {
+    player = 1;
+    document.write("ElseIf map = ? Then<br>");
+    for (var i=100;i<2000;i++){
+        if (color[i] > 0)
+        document.write("If xy"+player+" = "+i+" And PictureBox"+pic[i]+".Visible = True Then<br>Call back"+player+"()<br>End If<br>");
+    }
+    document.write("<br><br><br><br>");
+    document.write("ElseIf map = ? Then<br>");
+    player = 2;
+    for (var i=100;i<2000;i++){
+        if (color[i] > 0)
+        document.write("If xy"+player+" = "+i+" And PictureBox"+pic[i]+".Visible = True Then<br>Call back"+player+"()<br>End If<br>");
+    }
+    document.write("<br><br><br><br>");
+    document.write("ElseIf map = ? Then<br>");
+    for (var i=100;i<2000;i++){
+        player = 1;
+        var p = [10];
+        if (color[i] > 0 && color[i] < 3){
+            p[1] = i + 100
+            p[2] = i - 100
+            p[3] = i + 1
+            p[4] = i - 1
+            document.write("If tnt"+player+"xy = "+i+" Or tnt"+player+"xy = "+p[1]+" Or tnt"+player+"xy = "+p[2]+" Or tnt"+player+"xy = "+p[3]+" Or tnt"+player+"xy = "+p[4]+" Then<br>");      
+            if (color[i] == 1)
+            document.write("If PictureBox"+pic[i]+".Visible = True Then<br>Call point"+player+"()<br>End If<br>");
+            document.write("PictureBox"+pic[i]+".Visible = False<br>End If<br>");
+        }
+
+    }
+    document.write("<br><br><br><br>");
+    document.write("ElseIf map = ? Then<br>");
+    for (var i=100;i<2000;i++){
+        player = 2;
+        var p = [10];
+        if (color[i] > 0 && color[i] < 3){
+            p[1] = i + 100
+            p[2] = i - 100
+            p[3] = i + 1
+            p[4] = i - 1
+            document.write("If tnt"+player+"xy = "+i+" Or tnt"+player+"xy = "+p[1]+" Or tnt"+player+"xy = "+p[2]+" Or tnt"+player+"xy = "+p[3]+" Or tnt"+player+"xy = "+p[4]+" Then<br>");      
+            if (color[i] == 1)
+            document.write("If PictureBox"+pic[i]+".Visible = True Then<br>Call point"+player+"()<br>End If<br>");
+            document.write("PictureBox"+pic[i]+".Visible = False<br>End If<br>");
+        }
+
+    }
+    document.write("<br><br><br><br>");
+    document.write("ElseIf map = ? Then<br>");
+    for (var i=100;i<2000;i++){
+        if (color[i] > 0)
+        document.write("PictureBox"+pic[i]+".Visible = True<br>");
+    }
+    document.write("<br><br><br><br>");
+    for (var i=100;i<2000;i++){
+        if (color[i] == 1)
+        document.write("PictureBox"+pic[i]+".Image = ImageList9.Images(block(1))<br>");
+    }
+    for (var i=100;i<2000;i++){
+        if (color[i] == 2)
+        document.write("PictureBox"+pic[i]+".Image = ImageList9.Images(block(2))<br>");
+    }
+    for (var i=100;i<2000;i++){
+        if (color[i] == 3)
+        document.write("PictureBox"+pic[i]+".Image = ImageList9.Images(block(3))<br>");
+    }
+}
+    </script>
+        <div id="xy">
+                <BR>
+                <input type="button" value="/" style="background-color:red;">
+                <input type="button" value="1" style="background-color:red;">
+                <input type="button" value="2" style="background-color:red;">
+                <input type="button" value="3" style="background-color:red;">
+                <input type="button" value="4" style="background-color:red;">
+                <input type="button" value="5" style="background-color:red;">
+                <input type="button" value="6" style="background-color:red;">
+                <input type="button" value="7" style="background-color:red;">
+                <input type="button" value="8" style="background-color:red;">
+                <input type="button" value="9" style="background-color:red;">
+                <input type="button" value="10" style="background-color:red;">
+                <input type="button" value="11" style="background-color:red;">
+                <input type="button" value="12" style="background-color:red;">
+                
+                <BR>
+                <input type="button" value="1" style="background-color:red;">
+                <input type="button" onclick="color[101] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[201] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[301] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[401] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[501] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[601] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[701] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[801] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[901] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1001] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1101] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1201] = i, this.style.backgroundColor = col;" value="[]">
+                <BR>  
+                    <input type="button" value="2" style="background-color:red;">
+                <input type="button" onclick="color[102] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[202] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[302] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[402] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[502] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[602] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[702] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[802] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[902] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1002] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1102] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1202] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="3" style="background-color:red;">
+                <input type="button" onclick="color[103] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[203] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[303] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[403] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[503] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[603] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[703] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[803] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[903] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1003] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1103] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1203] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                <input type="button" value="4" style="background-color:red;">
+                <input type="button" onclick="color[104] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[204] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[304] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[404] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[504] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[604] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[704] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[804] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[904] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1004] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1104] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1204] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="5" style="background-color:red;">
+                <input type="button" onclick="color[105] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[205] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[305] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[405] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[505] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[605] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[705] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[805] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[905] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1005] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1105] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1205] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                <input type="button" value="6" style="background-color:red;">
+                <input type="button" onclick="color[106] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[206] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[306] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[406] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[506] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[606] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[706] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[806] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[906] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1006] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1106] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1206] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="7" style="background-color:red;">
+                <input type="button" onclick="color[107] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[207] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[307] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[407] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[507] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[607] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[707] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[807] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[907] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1007] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1107] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1207] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="8" style="background-color:red;">
+                <input type="button" onclick="color[108] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[208] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[308] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[408] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[508] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[608] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[708] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[808] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[908] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1008] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1108] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1208] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="9" style="background-color:red;">
+                <input type="button" onclick="color[109] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[209] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[309] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[409] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[509] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[609] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[709] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[809] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[909] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1009] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1109] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1209] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="10" style="background-color:red;">
+                <input type="button" onclick="color[110] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[210] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[310] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[410] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[510] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[610] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[710] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[810] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[910] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1010] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1110] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1210] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="11" style="background-color:red;">
+                    <input type="button" onclick="color[111] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[211] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[311] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[411] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[511] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[611] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[711] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[811] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[911] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[1011] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[1111] = i, this.style.backgroundColor = col;" value="[]">
+                    <input type="button" onclick="color[1211] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="12" style="background-color:red;">
+                <input type="button" onclick="color[112] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[212] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[312] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[412] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[512] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[612] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[712] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[812] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[912] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1012] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1112] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1212] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+                    <input type="button" value="13" style="background-color:red;">
+                <input type="button" onclick="color[113] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[213] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[313] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[413] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[513] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[613] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[713] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[813] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[913] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1013] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1113] = i, this.style.backgroundColor = col;" value="[]">
+                <input type="button" onclick="color[1213] = i, this.style.backgroundColor = col;" value="[]">
+                <BR> 
+
+                
+        </div>
+        <BR>
+        <div id="team">
+            <input type="button" onclick="i = 1" value="得分[?]磚" id="dgray" style="background-color:#FF8C00;">
+            <input type="button" onclick="i = 2" value="果樹叢" id="gray" style="background-color:#27a80d;">
+            <input type="button" onclick="i = 3" value="堅硬紅磚" id="purple" style="background-color:rgb(130, 52, 0);">
+            <input type="button" onclick="i = 0" value="[Del]" id="eraser" style="background-color:#00DDDD;">
+            <input type="button" value="目前方塊" id="nowcolor" style="margin-left:100px;">
+            <h1>TNT的範圍是雙倍的! 所以請判斷是路線是否可行</h1>
+        </div>
+        <BR>
+        <div id="create">
+            <input type="button" onclick="create()" value="create">
+        </div>
+    </body>
+</html>
